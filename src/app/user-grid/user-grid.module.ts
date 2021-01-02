@@ -5,12 +5,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
 import {CrudOperationsService} from "./services/crud-operations.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   declarations: [UserViewComponent],
   imports: [
     FormsModule,
+    HttpClientModule,
     MatTableModule,
     MatButtonModule,
     ReactiveFormsModule
