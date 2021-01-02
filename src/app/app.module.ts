@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {UserGridModule} from "./user-grid/user-grid.module";
+import {UserGridConfiguration} from "./user-grid/models/configurations/user-grid-configuration";
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UserGridModule.forRoot(new UserGridConfiguration('http://localhost:8080/api/player')),
   ],
   providers: [],
   bootstrap: [AppComponent]
